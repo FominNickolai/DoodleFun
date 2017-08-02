@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				F4C6A7761DD6CB7000A6FBF4 /* AppDelegate.swift */,
+				F4C6A7881DD6CB8500A6FBF4 /* DoodleViewController.swift */,
 				F4C6A77A1DD6CB7000A6FBF4 /* Main.storyboard */,
 				F4C6A77D1DD6CB7000A6FBF4 /* Assets.xcassets */,
 				F4C6A77F1DD6CB7000A6FBF4 /* LaunchScreen.storyboard */,
 				F4C6A7821DD6CB7000A6FBF4 /* Info.plist */,
-				F4C6A7881DD6CB8500A6FBF4 /* DoodleViewController.swift */,
 			);
 			path = DoodleFun;
 			sourceTree = "<group>";
