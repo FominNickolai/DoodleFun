@@ -19,6 +19,9 @@ class DoodleViewController: UIViewController {
         print("\(traitCollection)")
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.reloadData()
+    }
     
 
 }
@@ -45,7 +48,14 @@ extension DoodleViewController: UICollectionViewDelegate {
 //MARK: - UICollectionViewDelegateFlowLayout
 extension DoodleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let sideSize = (traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular) ? 80.0 : 128.0
+        
+        let collectionViewSize = collectionView.frame.size
+        let collectionViewArea = Double(collectionViewSize.width * collectionViewSize.height)
+        
+        
+        //let sideSize = (traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular) ? 80.0 : 128.0
+        let sideSize = sqrt(collectionViewArea / (Double(doodleImages.count))) - 30
+        print(sideSize)
         
         return CGSize(width: sideSize, height: sideSize)
     }

@@ -69,6 +69,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Doodle Fun" id="pKP-0s-hCH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="NHv-Gd-GL0" id="cqw-fs-F71"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiQ-8K-hmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
